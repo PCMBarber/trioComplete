@@ -25,12 +25,6 @@ spec:
     - containerPort: 3306
     env:
     - name: MYSQL_ROOT_PASSWORD
-      valueFrom:
-        secretKeyRef:
-          name: mysql-credentials 
-          key: MYSQL_ROOT_PASSWORD       
+      value: root      
     - name: MYSQL_DATABASE
-      valueFrom:
-        secretKeyRef:
-          name: mysql-credentials 
-          key: MYSQL_DATABASE 
+      value: flask-db
